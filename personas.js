@@ -42,3 +42,54 @@ function agregarPersona(evento){
     actualizarTabla();
 
 }
+function actualizarTabla(){
+
+    tabla.innerHTML = "";
+
+    personas.forEach((persona, indice)=>{
+
+        const fila = document.createElement("tr");
+
+        const imc = (
+            persona.peso /
+            (persona.altura * persona.altura)
+        ).toFixed(2);
+
+        fila.innerHTML = `
+
+        <td>${persona.nombre}</td>
+
+        <td>${persona.apellido}</td>
+
+        <td>${persona.edad}</td>
+
+        <td>${persona.altura}</td>
+
+        <td>${persona.peso}</td>
+
+        <td>${imc}</td>
+
+        <td>
+
+            <button class="eliminar">
+
+                Eliminar
+
+            </button>
+
+        </td>
+
+        `;
+
+        fila.querySelector(".eliminar")
+        .addEventListener("click",()=>{
+
+            eliminarPersona(indice);
+
+        });
+
+        tabla.appendChild(fila);
+
+    });
+
+}
