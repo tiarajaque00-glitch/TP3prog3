@@ -93,3 +93,10 @@ function actualizarTabla(){
     });
 
 }
+function eliminarPersona(indice){
+
+    personas.splice(indice,1);
+
+    actualizarTabla();
+
+}
