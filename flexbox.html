@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicio Flexbox</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 1 - Flexbox</h1>
+        <p>Tarjetas generadas dinámicamente con JavaScript</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="personas.html">Personas JS</a>
+        <a href="react.html">React</a>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="card">
+            <h2>Tecnologías Web</h2>
+            <br>
+            <p> Las siguientes tarjetas se generan automáticamente desde un arreglo utilizando JavaScript.</p>
+            <br>
+
+            <button id="ordenarAZ">Ordenar A-Z</button>
+            <button id="ordenarZA">Ordenar Z-A</button>
+            <button id="resaltar">Resaltar tarjetas</button>
+            
+            <br><br>
+            <div id="contenedor" class="flex-container"></div>
+        </div>
+    </div>
+    
+    <footer> Programación III - Trabajo Práctico N° 3 </footer>
+    
+    <script src="js/flexbox.js"></script>
+
+</body>
+
+</html>
